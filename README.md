@@ -1,1 +1,1 @@
-# magnusAchor-RealEsatate-and-investment-Platform
+#RealEsatate-and-investment-Platform

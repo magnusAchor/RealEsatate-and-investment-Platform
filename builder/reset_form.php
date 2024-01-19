@@ -32,12 +32,12 @@ if($confirmResult->num_rows === 1){
 try {
     // SMTP configuration
     $mail->isSMTP();
-    $mail->Host = 'mail.villadin.com'; // Replace with your SMTP host
-    $mail->Port = 465; // Replace with your SMTP port
+    $mail->Host = '*******'; // Replace with your SMTP host
+    $mail->Port = ***; // Replace with your SMTP port
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'ssl'; // Use 'ssl' or 'tls' based on your server settings
-    $mail->Username = 'villastock@villadin.com'; // Replace with your email address
-    $mail->Password = 'donjazzy200'; // Replace with your email password
+    $mail->Username = '***********'; // Replace with your email address
+    $mail->Password = '*******'; // Replace with your email password
 
     // Set sender and recipient
     $mail->setFrom('villastock@villadin.com', 'Villadin'); // Replace with your email address and name
