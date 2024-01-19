@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Exclude requests for files without .php extension from URL rewriting
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !.*\.php$
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Redirect to add .php to URL, if it's missing
+RewriteCond %{REQUEST_FILENAME}.php !-f
+RewriteRule ^([^/]+)/?$ $1.php [L,R=301]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
